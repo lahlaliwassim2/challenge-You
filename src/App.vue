@@ -49,6 +49,10 @@ const getCurrentQuestion = computed(()=>{
   return question
 })
 
+const setAnswer = evt=>{
+  questions.value[currentQuestion.value].selected = evt.target.value
+  evt.target.value = null
+}
 
 </script>
 

@@ -54,6 +54,13 @@ const setAnswer = evt=>{
   evt.target.value = null
 }
 
+const nextQuestion = ()=>{
+  if(currentQuestion.value < questions.value.lenght - 1){
+    currentQuestion.value++
+  } else{
+    quizCompleted.value = true
+  }
+}
 </script>
 
 <template>

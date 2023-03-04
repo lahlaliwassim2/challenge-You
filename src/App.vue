@@ -108,10 +108,10 @@ const NextQuestion = () => {
 				:disabled="!getCurrentQuestion.selected">
 				{{ 
 					getCurrentQuestion.index == questions.length - 1 
-						? 'Finish' 
+						? "c'est terminer !!" 
 						: getCurrentQuestion.selected == null
-							? 'Select an option'
-							: 'Next question'
+							? 'vous devez selectionner un reponse'
+							: 'nouvelle question'
 				}}
 			</button>
 		</section>
@@ -123,16 +123,99 @@ const NextQuestion = () => {
 	</main>
 </template>
 
-<style scoped>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montsrrat", sans-serif;
+<style>
+
+.app {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
 }
 
-body {
-  background-color: bisque;
-  color: antiquewhite;
+h1 {
+  font-size: 2rem;
+  margin-left: 50%;
+  margin-bottom: 7rem;
+}
+
+.quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quiz-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.question {
+  font-size: 3Yrem;
+
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.score {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #eee;
+}
+
+.option.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.option.correct {
+  border-color: green;
+}
+
+.option.wrong {
+  border-color: red;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0069d9;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 </style>

@@ -1,7 +1,7 @@
-# Vue 3 + Vite
+# challeng_you
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Challenge You est une application de quiz interactive qui permet à ses utilisateurs de tester leurs connaissances dans différents domaines. Cette application peut être utilisée pour des activités d'apprentissage, d'évaluation et de divertissement. Elle offre une grande variété de questions avec des niveaux de difficulté différents pour permettre aux utilisateurs de progresser à leur propre rythme . 
 
-## Recommended IDE Setup
+## pour demarer taper :
+    npm run dev
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).

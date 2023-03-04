@@ -64,8 +64,26 @@ const nextQuestion = () => {
         <span class="score">Score : {{ score }} / {{ questions.length }}</span>
       </div>
       <div class="options">
-        <label >
-          <input type="radio" :name="getCurrentQuestion.index" :value="index" />
+        <label v-for="(options , index) in getCurrentQuestion.options"
+        :key="index"
+        :class="`option ${
+          getCurrentQuestion.selected==index
+            ? index == getCurrentQuestion.selected.answer
+              ? 'correct'
+              :'wrong'
+            : ''
+        } ${
+          getCurrentQuestion.selected != null && 
+          index != getCurrentQuestion.selected
+            ? 'disabled'
+            : ''
+        }`"
+        >
+          <input type="radio" 
+          :name="getCurrentQuestion.index" 
+          :value="index" 
+          
+          />
         </label>
       </div>
     </section>
